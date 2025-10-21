@@ -1,5 +1,18 @@
+@import "reset";
+@import "mixins";
+@import "fonts&variables";
+
+header {
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        color: $color-blue;
+    }
+}
+
 footer {
     display: flex;
     flex-direction: row;
-    background-color: $color-blue
+    background-color: $color-blue;
 }

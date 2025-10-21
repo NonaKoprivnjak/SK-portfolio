@@ -1,0 +1,30 @@
+@use 'sass:math';
+
+//Color variables
+
+$color-blue: #3F8AF8;
+$color-darker-blue: #1A54AB;
+$color-gray: #3D3E41;
+
+//Breakpoints for responsive mixins
+$grid-breakpoints: ("xs": 576px,
+  "s": 768px,
+  "m": 992px,
+  "l": 1024px,
+  "xl": 1280px);
+
+  //Fonts
+ @font-face {
+  font-family: "Quicksand";
+  src: url('../fonts/Quicksand-Medium.woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url('../fonts/Quicksand-SemiBold.woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
