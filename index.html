@@ -17,45 +17,125 @@
         <header>
             <a href="/" class="logo"><img src="Images/logo-3.svg" alt="logo" height="40.42" width="221.25"></a>
             <nav>
-                <div class="nav-container">
-                <div>
+                <ul class="nav-container">
+                <li>
                     <a href="#">About Me</a>
-                </div>
-                <div>
+                </li>
+                <li>
                     <a href="#">Contact</a>
-                </div>
-                <div>
+                </li>
+                <li>
                     <a href="#">Projects</a>
-                </div>
-                </div>
+                </li>
+                </ul>
                 
             </nav>
         </header>
-        <div>
-            <h2>Simona Koprivnjak Front-end student</h2>
+        <div class="hero-section">
+            <div class="hero-text">
+                 <h2>Simona 
+                    Koprivnjak 
+                    Front-end student</h2>
             <p>Begginer front-end developer, enthusiastic learner,
                 Master of pharmacy, nature and animal lover,
                 creative person passionate about building clean, responsive, and user-friendly web applications.</p>
+                <a href="#contact" class="btn">Let’s Work Together</a>
+            </div>
+            <div class="hero-img">
+                <img src="Images/hero-img.jpg" alt="hero image" height="431.6" width="287.5">
+            </div>
+            <div class="blue-div"></div>
+
         </div>
-        <div><img src="Images/bg-image.jpg" alt="desk-image" height="431.6" width="287.5"></div>
-        <div class="prj-container">
+        <div class="latest-work">
             <h3>Latest Work</h3>
             <p>Here is some of my latest work</p>
-            <div class="project-img-container">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+        </div>
+        <div class="project-container">
+            <div class="project-cards">
+               <div class="project-card">
+        <img src="Images/the-bean.jpg" alt="The Bean project" />
+        <h3>The Bean</h3>
+        <p>
+          Blog site for coffee enthusiasts and lovers with various coffee recipes and cocktails.
+          Created with HTML and CSS.
+        </p>
+        <a href="#" class="btn-outline">View Project</a>
+      </div>
+       <div class="project-card">
+        <img src="Images/numart.jpg" alt="NumArt project" />
+        <h3>The Bean</h3>
+        <p>
+          Blog site for coffee enthusiasts and lovers with various coffee recipes and cocktails.
+          Created with HTML and CSS.
+        </p>
+        <a href="#" class="btn-outline">View Project</a>
+      </div>
+       <div class="project-card">
+        <img src="Images/cactus-house.jpg" alt="Cactus House project" />
+        <h3>The Bean</h3>
+        <p>
+          Blog site for coffee enthusiasts and lovers with various coffee recipes and cocktails.
+          Created with HTML and CSS.
+        </p>
+        <a href="#" class="btn-outline">View Project</a>
+      </div>
+       <div class="project-card">
+        <img src="Images/cacti-land.jpg" alt="Cacti Land project" />
+        <h3>The Bean</h3>
+        <p>
+          Blog site for coffee enthusiasts and lovers with various coffee recipes and cocktails.
+          Created with HTML and CSS.
+        </p>
+        <a href="#" class="btn-outline">View Project</a>
+      </div>
+       <div class="project-card">
+        <img src="Images/mindmeld.jpg" alt="MindMeld project" />
+        <h3>The Bean</h3>
+        <p>
+          Blog site for coffee enthusiasts and lovers with various coffee recipes and cocktails.
+          Created with HTML and CSS.
+        </p>
+        <a href="#" class="btn-outline">View Project</a>
+      </div>
+       <div class="project-card">
+        <img src="Images/urban-nest.jpg" alt="Urban Nest project" />
+        <h3>The Bean</h3>
+        <p>
+          Blog site for coffee enthusiasts and lovers with various coffee recipes and cocktails.
+          Created with HTML and CSS.
+        </p>
+        <a href="#" class="btn-outline">View Project</a>
+      </div>
             </div>
         </div>
+    
+          <form id="contact-form">
+  <input type="email" name="email" id="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
     </main>
     <footer>
         <div>simonakoprivnjak@gmail.com</div>
         <div><img src="Images/github.svg" alt="github-logo" height="24" width="24"></div>
         <div>©2025 Simona Koprivnjak. All rights reserved.</div>
     </footer>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your public key
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+      .then(() => alert("Message sent successfully!"))
+      .catch(err => alert("Failed to send: " + err));
+  });
+</script>
 </body>
 
 </html>

@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+}
+button:focus, button:active,
+input:focus,
+input:active {
+  outline: none;
+  box-shadow: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Medium.woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-SemiBold.woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 220px;
+  padding: 20px 20px;
+}
+header nav {
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  position: sticky;
+  z-index: 10;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+header nav ul a {
+  text-decoration: none;
+  color: black;
+  box-shadow: inset 0 0 0 0 #3F8AF8;
+  font-weight: 500;
+  font-size: 24px;
+  padding: 4px;
+  transition: color 0.75s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+header nav ul a:hover {
+  color: white;
+  box-shadow: inset 200px 0 0 0 #3F8AF8;
+  border-radius: 5px;
+  color: white;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 64px 5%;
+}
+.hero-section .hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+.hero-section .hero-text h2 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 16;
+  color: #1A54AB;
+}
+.hero-section .hero-text p {
+  max-width: 500px;
+  margin-bottom: 32px;
+}
+.hero-section .hero-text .btn {
+  background: none;
+  border: 2px solid #3F8AF8;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #3F8AF8;
+  transition: all 0.75s;
+}
+.hero-section .hero-text .btn:hover {
+  background: #3F8AF8;
+  color: white;
+}
+.hero-section .hero-img {
+  flex: 1;
+  min-width: 280px;
+  text-align: right;
+}
+.hero-section .hero-img img {
+  max-width: 350px;
+  border-radius: 8px;
+}
+.hero-section .blue-div {
+  display: block;
+  height: 500px;
+  width: 260px;
+  background-color: #3F8AF8;
+  top: 0;
+}
+
+.latest-work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.latest-work h3 {
+  color: #1A54AB;
+  font-size: 32px;
+}
+.latest-work p {
+  color: #3D3E41;
+  font-size: 16px;
+}
+
+.project-container {
+  text-align: center;
+  padding: 64px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-container .project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50% 50%;
+  gap: 32px;
+}
+.project-container .project-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  border: 2px solid #1A54AB;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.project-container .project-card img {
+  width: 100%;
+  flex-grow: 1;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.project-container .project-card h3 {
+  margin-bottom: 8px;
+  color: #3D3E41;
+}
+.project-container .project-card p {
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+.project-container .project-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-container .project-card .btn-outline {
+  border: 1px solid #1A54AB;
+  color: #1A54AB;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: 0.75s;
+}
+.project-container .project-card .btn-outline:hover {
+  background: #1A54AB;
+  color: white;
+}
+
+footer {
+  background-color: #3F8AF8;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
