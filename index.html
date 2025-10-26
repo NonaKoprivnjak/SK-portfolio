@@ -110,11 +110,21 @@
             </div>
         </div>
     
-          <form id="contact-form">
-  <input type="email" name="email" id="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your message" required></textarea>
-  <button type="submit">Submit</button>
-</form>
+         <div class="contact-section">
+  <h2>Got a project in mind? Drop me a line!</h2>
+  <p>Let’s make something awesome together</p>
+
+  <form id="contact-form">
+    <div class="input-row">
+      <input type="text" name="name" placeholder="Enter Your Full Name" required />
+      <input type="email" name="email" placeholder="Enter Your Email" required />
+    </div>
+    <input type="text" name="timeframe" placeholder="Choose a Timeframe" required />
+    <input type="text" name="budget" placeholder="Choose a Budget" required />
+    <textarea name="message" placeholder="How can I help you?" required></textarea>
+    <button type="submit">Let’s Work Together</button>
+  </form>
+</div>
     </main>
     <footer>
         <div>simonakoprivnjak@gmail.com</div>
@@ -126,12 +136,12 @@
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your public key
+    emailjs.init("0z9S4z0cDNaYxv7Ix"); // Replace with your public key
   })();
 
   document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
-    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    emailjs.sendForm("service_n5x6v6g", "template_zb8gd23", this)
       .then(() => alert("Message sent successfully!"))
       .catch(err => alert("Failed to send: " + err));
   });

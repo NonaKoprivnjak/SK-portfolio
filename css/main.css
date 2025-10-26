@@ -39,6 +39,10 @@ a:visited {
   font-style: normal;
   font-display: swap;
 }
+body {
+  position: relative;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -61,6 +65,7 @@ header nav ul a {
   text-decoration: none;
   color: black;
   box-shadow: inset 0 0 0 0 #3F8AF8;
+  font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 24px;
   padding: 4px;
@@ -82,16 +87,20 @@ header nav ul a:hover {
 .hero-section .hero-text {
   flex: 1;
   min-width: 300px;
+  font-family: "Quicksand", sans-serif;
 }
 .hero-section .hero-text h2 {
   font-size: 40px;
   line-height: 1.2;
   margin-bottom: 16;
   color: #1A54AB;
+  font-weight: 600;
 }
 .hero-section .hero-text p {
   max-width: 500px;
   margin-bottom: 32px;
+  color: #3D3E41;
+  font-weight: 500;
 }
 .hero-section .hero-text .btn {
   background: none;
@@ -99,6 +108,7 @@ header nav ul a:hover {
   padding: 12px 24px;
   border-radius: 4px;
   text-decoration: none;
+  font-weight: 600;
   color: #3F8AF8;
   transition: all 0.75s;
 }
@@ -108,19 +118,26 @@ header nav ul a:hover {
 }
 .hero-section .hero-img {
   flex: 1;
+  position: relative;
+  z-index: 20;
   min-width: 280px;
   text-align: right;
+  left: -120px;
 }
 .hero-section .hero-img img {
-  max-width: 350px;
-  border-radius: 8px;
+  max-width: 450px;
+  width: 50%;
+  height: 40%;
 }
 .hero-section .blue-div {
   display: block;
-  height: 500px;
-  width: 260px;
+  position: absolute;
+  height: 28%;
+  width: 22%;
   background-color: #3F8AF8;
-  top: 0;
+  top: -84.41px;
+  right: 0;
+  z-index: 1;
 }
 
 .latest-work {
@@ -128,19 +145,23 @@ header nav ul a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Quicksand", sans-serif;
   gap: 25px;
 }
 .latest-work h3 {
   color: #1A54AB;
   font-size: 32px;
+  font-weight: 600;
 }
 .latest-work p {
   color: #3D3E41;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .project-container {
   text-align: center;
+  font-family: "Quicksand", sans-serif;
   padding: 64px 5%;
   display: flex;
   align-items: center;
@@ -157,7 +178,7 @@ header nav ul a:hover {
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  text-align: left;
+  text-align: center;
   border: 2px solid #1A54AB;
   border-top-right-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -171,10 +192,14 @@ header nav ul a:hover {
 .project-container .project-card h3 {
   margin-bottom: 8px;
   color: #3D3E41;
+  font-weight: 500;
 }
 .project-container .project-card p {
-  font-size: 15px;
+  font-size: 16px;
+  color: #3D3E41;
   margin-bottom: 18px;
+  font-weight: 500;
+  line-height: 20px;
 }
 .project-container .project-card a {
   display: flex;
@@ -182,9 +207,13 @@ header nav ul a:hover {
   justify-content: center;
 }
 .project-container .project-card .btn-outline {
+  display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
   border: 1px solid #1A54AB;
   color: #1A54AB;
   text-decoration: none;
+  font-weight: 600;
   padding: 8px 16px;
   border-radius: 4px;
   transition: 0.75s;
@@ -194,12 +223,82 @@ header nav ul a:hover {
   color: white;
 }
 
+.contact-section {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  color: #1A54AB;
+  margin: 64px auto;
+  padding: 0 16px;
+  max-width: 700px;
+}
+.contact-section h2 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.contact-section p {
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+.contact-section #contact-form {
+  border: 2px solid #1A54AB;
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: white;
+}
+.contact-section #contact-form .input-row {
+  display: flex;
+  gap: 16px;
+}
+.contact-section #contact-form .input-row input {
+  width: 100%;
+}
+.contact-section #contact-form input,
+.contact-section #contact-form textarea {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #1A54AB;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.contact-section #contact-form input::placeholder,
+.contact-section #contact-form textarea::placeholder {
+  color: #777;
+}
+.contact-section #contact-form input:focus,
+.contact-section #contact-form textarea:focus {
+  border-color: rgb(19.269035533, 62.2538071066, 126.730964467);
+}
+.contact-section #contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.contact-section #contact-form button {
+  background: #1A54AB;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  padding: 14px 0;
+  border-radius: 0 0 2px 2px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact-section #contact-form button:hover {
+  background: rgb(19.269035533, 62.2538071066, 126.730964467);
+}
+
 footer {
   background-color: #3F8AF8;
   color: white;
   text-align: center;
   padding: 80px 20px;
   font-size: 18px;
+  font-family: "Quicksand", sans-serif;
   font-weight: 500;
   display: flex;
   flex-direction: row;
