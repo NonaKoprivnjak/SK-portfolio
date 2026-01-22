@@ -132,7 +132,7 @@ header nav ul a:hover {
 .hero-section .blue-div {
   display: block;
   position: absolute;
-  height: 28%;
+  height: 23%;
   width: 22%;
   background-color: #3F8AF8;
   top: -84.41px;
@@ -170,7 +170,6 @@ header nav ul a:hover {
 .project-container .project-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50% 50%;
   gap: 32px;
 }
 .project-container .project-card {
@@ -221,6 +220,26 @@ header nav ul a:hover {
 .project-container .project-card .btn-outline:hover {
   background: #1A54AB;
   color: white;
+}
+
+.blue-short {
+  position: absolute;
+  width: 160px;
+  opacity: 0.5;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.blue1 {
+  top: 80px;
+  right: 0;
+  transform: translateY(-40%);
+}
+
+.blue2 {
+  top: 1250px;
+  left: 5%;
+  transform: translateY(-30%);
 }
 
 .contact-section {
@@ -292,6 +311,31 @@ header nav ul a:hover {
   background: rgb(19.269035533, 62.2538071066, 126.730964467);
 }
 
+#scrollTopBtn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 999;
+  background: linear-gradient(135deg, #5f4ff1, #b6b199);
+  color: rgb(251, 250, 250);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background: linear-gradient(135deg, #dad5ba, #182d2a);
+  transform: scale(1.1);
+}
+
 footer {
   background-color: #3F8AF8;
   color: white;
@@ -309,4 +353,173 @@ footer {
 footer a {
   color: white;
   text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  header {
+    gap: 80px;
+  }
+  .hero-section {
+    padding: 48px 5%;
+  }
+  .hero-section .hero-text h2 {
+    font-size: 34px;
+  }
+  .hero-section .hero-img {
+    left: -60px;
+  }
+  .hero-section .hero-img img {
+    width: 70%;
+  }
+  .hero-section .blue-div {
+    display: none !important;
+  }
+  .project-container .project-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer {
+    padding: 40px 20px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    gap: 0;
+  }
+  .logo img {
+    height: 32px;
+    width: auto;
+  }
+  nav {
+    position: relative;
+  }
+  .nav-container {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 40px 0;
+    display: none;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    border-bottom: 2px solid #1A54AB;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+  .nav-container.active {
+    display: flex;
+  }
+  .nav-container a {
+    font-size: 20px;
+    padding: 8px 0;
+  }
+  .hero-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 64px 16px;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 540px;
+  }
+  .hero-text h2 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+  .hero-text p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .hero-img img {
+    max-width: 280px;
+  }
+  .blue-div {
+    display: none !important;
+  }
+  .project-container {
+    padding: 64px 16px;
+  }
+  .project-cards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .project-card {
+    padding: 24px;
+  }
+  .contact-section {
+    padding: 0 16px;
+  }
+  .contact-section h2 {
+    font-size: 24px;
+  }
+  .contact-section p {
+    font-size: 16px;
+  }
+  #contact-form {
+    padding: 24px;
+  }
+  #contact-form .input-row {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    padding: 48px 16px;
+    font-size: 15px;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .nav-container a {
+    font-size: 18px;
+  }
+  .hero-section {
+    padding: 48px 16px;
+    gap: 32px;
+  }
+  .hero-text h2 {
+    font-size: 26px;
+  }
+  .hero-text p {
+    font-size: 15px;
+  }
+  .hero-img img {
+    max-width: 240px;
+  }
+  .blue-div {
+    display: none !important;
+  }
+  .btn {
+    width: 100%;
+    padding: 14px 0;
+  }
+  .project-card {
+    padding: 20px;
+  }
+  .project-card img {
+    height: 260px;
+  }
+  .project-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .contact-section h2 {
+    font-size: 22px;
+  }
+  .contact-section p {
+    font-size: 15px;
+  }
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 15px;
+  }
+  footer {
+    font-size: 14px;
+    gap: 12px;
+  }
 }
